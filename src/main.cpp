@@ -11,7 +11,11 @@ void setup()
 {
     Serial.begin(9600);
     SerialBT.begin("esp32/test");
-    WiFi_Init();
+    Serial.printf("\nSerial port...9.6KB/s\n");
+    SerialBT.printf("Serial port...9.6KB/s\n");
+    Serial.printf("Bluetooth serial...9.6KB/s\n");
+    SerialBT.printf("Bluetooth serial...9.6KB/s\n");
+    // WiFi_Init();
 }
 
 void loop()
