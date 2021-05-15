@@ -1,0 +1,21 @@
+#include <Arduino.h>
+#include "BluetoothSerial.h"
+
+extern BluetoothSerial SerialBT;
+
+void WiFi_Init();
+void SerialEvent();
+void SerialBTEvent();
+
+void setup()
+{
+    Serial.begin(9600);
+    SerialBT.begin("esp32/test");
+    WiFi_Init();
+}
+
+void loop()
+{
+    SerialEvent();
+    SerialBTEvent();
+}
